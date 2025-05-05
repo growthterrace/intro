@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('./fonts/GmarketSansMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-family: 'GmarketSans', sans-serif;
+    height: 100%;
+    font-size: 18px; 
+  }
+  
+  /* 고정 메뉴 스타일 */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  nav a {
+    font-size: 1.5rem;
+    color: #1a3f2a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 공통 섹션 스타일 */
+  .list {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  
+  /* 홈 섹션 스타일 */
+  #home {
+    background-color: #e1f0e5;
+    text-align: center;
+  }
+  
+  #home h1 {
+    font-size: 2rem;
+    color: #1a3f2a;
+    margin-bottom: 20px;
+  }
+  
+  #home p {
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* About 섹션 전체 배경 */
+  #about {
+    background-color: #222;
+  }
+
+  .about-section {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .about-photo img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* What I Love 섹션 전체 배경 */
+  #favorites {
+    background-color: #f3f0ec;
+  }
+  
+  @media (max-width: 768px) {
+    .favorites-item {
+      width: 100%;
+    }
+  }  
+
+  .favorites-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px 80px;
+    padding: 60px 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .favorites-item {
+    width: 45%; 
+    text-align: center;
+    color: #333;
+  }
+  
+  .favorites-item img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  .favorites-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .favorites-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  .favorites-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  
+  /* Contact 섹션 */
+  #contact {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    background-color: white;
+  }
+  
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background-color: #f9f9f9;
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-card a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-email {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 30px;
+  }
+
